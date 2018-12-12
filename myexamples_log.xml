@@ -1,0 +1,43 @@
+<root>
+    <desc>This file contains task for plaining system (Pathfinding)</desc>
+    <map>
+        <title>bootybay</title>
+        <width>5</width>
+        <height>5</height>
+        <cellsize>5</cellsize>
+        <startx>0</startx>
+        <starty>0</starty>
+        <finishx>4</finishx>
+        <finishy>4</finishy>
+        <grid>
+            <row>0 0 0 0 0 </row>
+            <row>0 1 0 0 0 </row>
+            <row>0 0 1 0 0 </row>
+            <row>0 0 0 0 0 </row>
+            <row>0 0 0 0 0 </row>
+        </grid>
+    </map>
+    <algorithm>
+        <metrictype>diagonal</metrictype>
+        <searchtype>astar</searchtype>
+        <hweight>1</hweight>
+        <breakingties>g-max</breakingties>
+        <cutcorners>false</cutcorners>
+        <allowdiagonal>true</allowdiagonal>
+        <allowsqueeze>false</allowsqueeze>
+        <opentype>list</opentype>
+        <openallowduplicates>true</openallowduplicates>
+    </algorithm>
+    <options>
+        <loglevel>1</loglevel>
+        <logpath/>
+        <logfilename/>
+    </options>
+    <log>
+        <mapfilename>myexamples.xml</mapfilename>
+        <summary numberofsteps="686" nodescreated="23" length="0" length_scaled="0" time="0.000058"/>
+        <path>Path NOT found!</path>
+        <lplevel/>
+        <hplevel/>
+    </log>
+</root>

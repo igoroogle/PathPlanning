@@ -1,0 +1,41 @@
+<root>
+    <desc>This file contains task for plaining system (Pathfinding)</desc>
+    <map>
+        <title>bootybay</title>
+        <width>10</width>
+        <height>10</height>
+        <cellsize>10</cellsize>
+        <startx>0</startx>
+        <starty>0</starty>
+        <finishx>9</finishx>
+        <finishy>9</finishy>
+        <grid>
+            <row>0 0 0 0 0 0 0 0 0 0 </row>
+            <row>0 0 0 0 0 0 0 0 0 0 </row>
+            <row>0 0 0 0 0 0 0 0 0 0 </row>
+            <row>0 0 0 0 0 0 0 0 0 0 </row>
+            <row>0 0 0 0 0 0 0 0 0 0 </row>
+            <row>0 0 0 0 0 0 0 0 0 0 </row>
+            <row>0 0 0 0 0 0 0 0 0 0 </row>
+            <row>0 0 0 0 0 0 0 0 0 0 </row>
+            <row>0 0 0 0 0 0 0 0 0 0 </row>
+            <row>0 0 0 0 0 0 0 0 0 0 </row>
+        </grid>
+    </map>
+    <algorithm>
+        <metrictype>diagonal</metrictype>
+        <searchtype>astar</searchtype>
+        <hweight>1</hweight>
+        <breakingties>g-max</breakingties>
+        <cutcorners>false</cutcorners>
+        <allowdiagonal>true</allowdiagonal>
+        <allowsqueeze>false</allowsqueeze>
+        <opentype>list</opentype>
+        <openallowduplicates>true</openallowduplicates>
+    </algorithm>
+    <options>
+        <loglevel>1</loglevel>
+        <logpath />
+        <logfilename />
+    </options>
+</root>
