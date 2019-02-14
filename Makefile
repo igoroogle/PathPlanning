@@ -35,7 +35,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = ASearch1.0.0
-DISTDIR = /Users/Igor/Documents/pathPlanning/proj3/astar_mac/.tmp/ASearch1.0.0
+DISTDIR = /Users/Igor/Documents/pathPlanning/proj2/astar_mac/.tmp/ASearch1.0.0
 LINK          = /Library/Developer/CommandLineTools/usr/bin/clang++
 LFLAGS        = -stdlib=libc++ -headerpad_max_install_names $(EXPORT_ARCH_ARGS) -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.10 -Wl,-rpath,@executable_path/Frameworks -Wl,-rpath,/anaconda3/lib
 LIBS          = $(SUBLIBS) -L/anaconda3/lib -lQt5Gui -framework DiskArbitration -framework IOKit -lQt5Core -framework OpenGL -framework AGL 
