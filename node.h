@@ -28,10 +28,6 @@ struct Node
         j = -1;
     }
 
-    ~Node() {
-
-    }
-
     Node(std::pair<int, int> add) {
         F = 0;
         g = 0;
