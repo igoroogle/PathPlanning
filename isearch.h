@@ -3,13 +3,11 @@
 #include "ilogger.h"
 #include "searchresult.h"
 #include "environmentoptions.h"
-#include <queue>
 #include <list>
 #include <vector>
 #include <math.h>
 #include <limits>
 #include <chrono>
-#include <utility>
 
 class ISearch
 {
@@ -39,17 +37,11 @@ class ISearch
         //Start with very simple (and ineffective) structures like list or vector and make it work first
         //and only then begin enhancement!
 
-        virtual double computeHFromCellToCell(int i1, int j1, int i2, int j2, const EnvironmentOptions &options) {
-            return 0;
-        };
 
+
+        virtual double computeHFromCellToCell(int i1, int j1, int i2, int j2, const EnvironmentOptions &options) = 0;
         void makePrimaryPath(Node* curNode);//Makes path using back pointers
         void makeSecondaryPath();//Makes another type of path(sections or points)
-        void addOpen(Node* curNode);
-        void addClose(Node* curNode);
-        Node* extMin();
-        void cleanMemory();
-        bool isClosed(Node* curNode);
         //std::list<Node> findSuccessors(Node curNode, const Map &map, const EnvironmentOptions &options);
         //void makePrimaryPath(Node curNode);//Makes path using back pointers
         //void makeSecondaryPath();//Makes another type of path(sections or points)
@@ -59,14 +51,9 @@ class ISearch
         std::list<Node>                 lppath, hppath;
         double                          hweight;//weight of h-value
         bool                            breakingties;//flag that sets the priority of nodes in addOpen function when their F-values is equal
-        int h, w; //table size
-        Node startNode, goalNode;
-        int openSize, closeSize; //size of open and close nodes
         //need to define open, close;
-        //std::vector<std::vector<bool>> close;
-        //std::vector<std::vector<Node*>> open;
-        std::unordered_map<int, Node*> close;
-        std::priority_queue<std::pair<std::pair<double, double>, Node*>> open;
-        std::list<Node*> findSuccessors(Node* curNode, const Map &map, const EnvironmentOptions &options);
+        std::vector<std::vector<bool>> close;
+        std::vector<std::vector<Node*>> open;
+        virtual std::list<Node> findSuccessors(Node curNode, const Map &map, const EnvironmentOptions &options);
 };
 #endif
