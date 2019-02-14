@@ -2,7 +2,7 @@
 
 EnvironmentOptions::EnvironmentOptions()
 {
-    metrictype = CN_SP_MT_EUCL;
+    metrictype = CN_SP_MT_EUCL; // CN_SP_MT_EUCL =
     allowsqueeze = false;
     allowdiagonal = true;
     cutcorners = false;
